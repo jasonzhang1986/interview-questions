@@ -3,7 +3,7 @@
 
 * **onCreate 方法**，Activity 被启动时的第一个方法，表示 Activity 正在被创建，在这个方法中一般做一些初始化的工作，比如调用 setContentView 方法加载界面布局，并且可以做一些初始化数据的工作：声明UI元素，定义成员变量，配置 UI 等。
 
- ** onCreate 尽量少做一些不必要的操作，避免 Activity 启动太久，使用户半天看不到 Activity**
+ **onCreate 尽量少做一些不必要的操作，避免 Activity 启动太久，使用户半天看不到 Activity**
 
 * **onStart 方法**，表示 Activity 正在被启动，其实这时 Activity 已经可见了，正如上图所表示的 Visible ,但并不能被用户所见，我们可以这样理解，Activity 现在运行到了后台，还没有准备好到前台和用户交互。
 
