@@ -1,6 +1,6 @@
 
 ### Android相关
-* [Activity正常和异常情况下的生命周期](http://blog.csdn.net/geekerhw/article/details/48749935)
+* [Activity正常和异常情况下的生命周期](/Android/ActivityLifeCycle.md)
 * [Activity的四种启动模式](http://blog.csdn.net/zhangjg_blog/article/details/10923643)
 * [app如何保证后台服务不被杀死](http://dev.qq.com/topic/57ac4a0ea374c75371c08ce8)
 * [Activity与Fragment生命周期有何联系](http://www.cnblogs.com/purediy/p/3276545.html)
