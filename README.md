@@ -13,11 +13,11 @@
 * handler发消息给子线程，looper怎么启动
 * Android 上的 Inter-Process-Communication 跨进程通信时如何工作的；
 * 如何优化一个 ListView ?
-* listview图片加载错乱的原理和解决方案
-* RecyclerView与ListView 的区别，缓存机制的不同，性能
-* 怎么启动service，service和activity怎么进行数据交互
+* listview 图片加载错乱的原理和解决方案
+* RecyclerView 与 ListView 的区别，缓存机制的不同，性能
+* 怎么启动 service，servic 和 activity 怎么进行数据交互
 * 哪些情况会导致 OOM ？
-* android什么情况下会发生内存泄露
+* android 什么情况下会发生内存泄露
 * 造成 ANR 的原因？
 * 如何监测内存泄露？有哪些工具？
 * 用 leak 工具监测内存泄露的原理是什么？
@@ -30,14 +30,14 @@
 * service生命周期
 * 介绍下 SurfaceView、TextureView
 * android 事件传递机制
-* 多线程（关于AsyncTask缺陷引发的思考）
-* App启动流程，从点击桌面开始
+* 多线程（关于 AsyncTask 缺陷引发的思考）
+* App 启动流程，从点击桌面开始
 * activity 栈
-* down、move、up事件的传递
-* 封装view的时候怎么知道view的大小
+* down、move、up 事件的传递
+* 封装view的时候怎么知道 view 的大小
 * view渲染
 * intent-filter
-* 下拉状态栏是不是影响activity的生命周期，如果在onStop的时候做了网络请求，onResume的时候怎么恢复
+* 下拉状态栏是不是影响 activity 的生命周期，如果在 onStop 的时候做了网络请求，onResume 的时候怎么恢复
 * 谈谈 ClassLoader
 * 动态布局
 * 热修复,插件化
