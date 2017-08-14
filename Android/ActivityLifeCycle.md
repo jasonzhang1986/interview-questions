@@ -9,7 +9,7 @@
 
 * **onResume 方法**，此时 Activity 来到前台和用户进行交互，用户真正的看到了 Activity 。
 
-    ** 往往程序在 onCreate 执行完成之后会迅速调用 onStart 方法和 onResume 方法。**
+    **往往程序在 onCreate 执行完成之后会迅速调用 onStart 方法和 onResume 方法。**
 
 * **onPause 方法**,表示 Activity 正在停止，该状态下，activity 的部分被另外一个 activity 所遮盖：另外的 activity 来到前台，但是半透明的，不会覆盖整个屏幕。被暂停的 activity 不再接受用户的输入且不再执行任何代码。
 
