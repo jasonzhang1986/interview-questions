@@ -15,7 +15,7 @@
 
 * **onStop 方法**，该状态下, activity 完全被隐藏，对用户不可见。可以认为是在后台。当 stopped, activity 实例与它的所有状态信息（如成员变量等）都会被保留，但 activity 不能执行任何代码。
 
-    ** 整个生命周期方法中，只有 onResume, onPause, onStop 方法是“静态”的，既可以存在较长的时间的。其它状态 ( Created 与 Started )都是短暂的，系统快速的执行那些回调函数并通过执行下一阶段的回调函数移动到下一个状态。也就是说，在系统调用 onCreate (), 之后会迅速调用 onStart (), 之后再迅速执行 onResume()。**
+    **整个生命周期方法中，只有 onResume, onPause, onStop 方法是“静态”的，既可以存在较长的时间的。其它状态 ( Created 与 Started )都是短暂的，系统快速的执行那些回调函数并通过执行下一阶段的回调函数移动到下一个状态。也就是说，在系统调用 onCreate (), 之后会迅速调用 onStart (), 之后再迅速执行 onResume()。**
 
 * **onRestart 方法**，Activity 从不可见又变为可见时会调用。此时调用顺序为: onRestart -> onStart -> onResume
 
