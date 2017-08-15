@@ -40,13 +40,17 @@
 
 * **资源内存不足导致低优先级的Activity被杀死**
 
-    Activity按照优先级我们可以分为以下的三种：
-    - 前台Activity—正在和用户交互的Activity，优先级最高。
-    - 可见但非前台Activity,如处于onPause状态的Activity，Activity中弹出了一个对话框，导致Activity可见但是位于后台无法和用户直接交互。
-    - 后台Activity—已经被暂停的Activity,比如执行了onStop方法，优先级最低。
+    Activity 按照优先级我们可以分为以下的三种：
+    - 前台 Activity —正在和用户交互的 Activity ，优先级最高。
+    - 可见但非前台 Activity ,如处于 onPause 状态的 Activity，Activity 中弹出了一个对话框，导致 Activity 可见但是位于后台无法和用户直接交互。
+    - 后台 Activity —已经被暂停的 Activity,比如执行了 onStop 方法，优先级最低。
 
   当系统内存不足时，系统就会按照上述的优先级顺序选择杀死 Activity 所在的进程，并在后续通过 onSaveInstanceState 缓存数据和 onRestoreInstanceState 恢复数据。
 
- ***如果一个进程中没有四大组件在执行，那么这个进程将很快被杀死，因此，一些后台工作不适合脱离了四大组件工作，比较好的方法是将后台工作放入Service中从而保证进程有一定的优先级，这样就不会轻易的被系统杀死。***
+ ***如果一个进程中没有四大组件在执行，那么这个进程将很快被杀死，因此，一些后台工作不适合脱离了四大组件工作，比较好的方法是将后台工作放入 Service 中从而保证进程有一定的优先级，这样就不会轻易的被系统杀死。***
 
- ***系统只恢复那些被开发者指定过id的控件，如果没有为控件指定id,则系统就无法恢复了。***
+ ***系统只恢复那些被开发者指定过 id 的控件，如果没有为控件指定 id ,则系统就无法恢复了。***
+
+ - **用户按 back 键退出 Activity，  系统不调用 onSaveInstanceState**
+ - **代码中主动调用 finish 方法结束 Activity，系统不调用 onSaveInstanceState**
+ - **其他情况，比如按 Home 键导致 Activity 进入后台、startActivity 导致当前 Activity 进入后台等，这些情况都可能在内存不足时由系统来回收后台的 Activity，所以这些情况会在 onPause 之后 onStop 之前调用 onSaveInstanceState 来保存 Activity 的当前状态。**
