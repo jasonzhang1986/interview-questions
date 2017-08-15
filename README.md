@@ -2,7 +2,7 @@
 ### Android相关
 * [Activity 正常和异常情况下的生命周期](/Android/ActivityLifeCycle.md)
 * [Activity 的四种启动模式](http://blog.csdn.net/zhangjg_blog/article/details/10923643)
-* 画出 Android 的大体架构图
+* [画出 Android 的大体架构图](/Android/Platform_Architecture.md)
 * [app 如何保证后台服务不被杀死](http://dev.qq.com/topic/57ac4a0ea374c75371c08ce8)
 * [Activity 与 Fragment 生命周期有何联系](http://www.cnblogs.com/purediy/p/3276545.html)
 * [Activity 与 Fragment 之间如何进行通信？](http://blog.csdn.net/u012702547/article/details/49786417)
