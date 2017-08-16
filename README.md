@@ -7,7 +7,7 @@
 * [Activity 与 Fragment 生命周期有何联系](https://blog.piasy.com/2017/01/14/Android-Basics-Activity-Fragment-Life-Cycle/)
 * [Activity 与 Fragment 之间如何进行通信？](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Activity_communicate_to_Fragment.md)
 * [IntentService 比 Service 好在哪](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Service.md)
-* Thread 和 HandlerThread 区别
+* [Thread 和 HandlerThread 区别](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Thread_HandlerThread.md)
 * 关于< include >< merge >< stub >三者的使用场景
 * 对 Android 消息机制的理解( Binder、Handler )
 * handler发消息给子线程，looper怎么启动
