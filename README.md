@@ -77,7 +77,6 @@
 * RxJava 中 map 和 flatmap 操作符的区别及底层实现
 * Retrofit 使用的注解是哪种注解？以及，注解的底层实现是怎样的
 * 视频加密传输
-* OSGI
 
 
 ### Java相关
@@ -101,7 +100,7 @@
 * 单例模式有哪些实现方式
 * 通过静态内部类实现单例模式有哪些优点
 * synchronized volatile 关键字有什么区别？以及还有哪些同样功能的关键字
-* [synchronize用法](/Java/Synchronized.md)
+* [synchronize用法](https://github.com/jasonzhang1986/interview-questions/blob/master/Java/Synchronized.md)
 * 操作系统进程间通信有哪些方法
 * 谈谈对 Socket 的理解
 * 不同架构的机器有何不同（如x86等）
