@@ -70,7 +70,7 @@ onHandleIntent 的处理内容如下：
 第一次 startService 后等待超过2秒之后再次调用 startService, 我们看到重新走了 Service 的生命周期，之后多次快速调用 startService，看到一次发送到消息队列，然后依次单线程执行 onHandelIntent, 最后在 stopSelf。
 
 
-这里有个细节，每次 handleMessage 中在 onHandleIntent 之后都调用了 stopSelf ，为什么还可以执行后续的 intent 操作，跟踪源码
+这里有个细节，每次 handleMessage 中在 onHandleIntent 之后都调用了 stopSelf ，为什么还可以执行后续的 intent 操作，跟踪源码，重点看添加的注释
 ```Java
 //Service.java
 public final void stopSelf(int startId) {
