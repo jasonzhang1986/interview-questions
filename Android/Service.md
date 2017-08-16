@@ -94,7 +94,7 @@ public boolean stopServiceToken(ComponentName className, IBinder token,
     }
 }
 
-
+//ActiveServices.java
 boolean stopServiceTokenLocked(ComponentName className, IBinder token,
         int startId) {
     if (DEBUG_SERVICE) Slog.v(TAG, "stopServiceToken: " + className
