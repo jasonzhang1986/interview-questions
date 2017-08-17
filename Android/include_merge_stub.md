@@ -24,5 +24,88 @@
 
 **Note**：tools:showIn 是一个特殊的属性，它仅仅在 AndroidStudio 的 design-time 使用，当编译的时候会被 remove 掉。它的作用是指定一个布局来包含当前视图，这样你可以通过 AndroiStudio 的预览功能看到嵌入后的效果。
 
-### 使用< include /> 标签
-在需要添加可重用组件的布局中添加 < include /> 标签。
+### 使用< include > 标签
+在需要添加可重用组件的布局中添加 < include /> 标签。例如，这里是一个包含标题栏的布局：
+
+下面是布局文件的内容:
+```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:gravity="center_horizontal">
+
+    <include layout="@layout/titlebar"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/hello"
+              android:padding="10dp" />
+
+    ...
+
+</LinearLayout>
+```
+你可以通过在 < include /> 标签中指定被包含布局的根视图的所有 layout 属性( android:layout_* 属性)。
+```xml
+<include android:id="@+id/news_title"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         layout="@layout/title"/>
+```
+但是，如果你需要在< include /> 标签里面设置布局属性，你必须同时设置 androi:layout_height 和 android:layout_width 才能使其他布局属性起作用。
+
+![include 效果](pic/include.jpg)
+
+**Note：<font color=red>需要在 layout_main 中添加 include 标签</font>**
+
+运行之后的布局结果
+
+![布局结构](pic/include2.jpg)
+
+### 使用 < merge > 标签
+当在一个布局中包含另一个布局时，< merge /> 标签有助于消除视图结构中的冗余视图组( ViewGroup )。举个栗子，如果你的主布局时一个垂直的 LinearLayout, 子布局是两个可重用的视图，但可重用的子视图都有一个自己的根布局(如上一节提到的可重用布局都需要一个根布局)；然而使用另一个 LinearLayout 作为可重用布局的根视图，将导致在垂直的 LinearLayout 中直接包含另一个垂直的 LinearLayout。嵌套的 LinearLayout 除了会拖慢 UI 性能之外别无其他用途。
+
+为了避免包含上面所说的冗余的视图组，你可以使用 < merge >标签作为可重用布局的根视图。
+```xml
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"/>
+
+</merge>
+```
+现在，当你使用 < include >标签把这个布局包含在另一个布局中时，系统会忽略 < merge > 标签，并将两个按钮直接放在布局中，而不是 < include > 标签。
+
+使用实例：
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SecondActivity!"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+         />
+    <include layout="@layout/layout_merge"/>
+</LinearLayout>
+```
+
+运行后的效果以及层次结构：
+![merge 效果](pic/merge.jpg)
+
+从层次图上看，merge view 被 include 到 LinearLayout 中之后，并没有添加新的层次结果。
