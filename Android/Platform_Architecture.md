@@ -1,7 +1,7 @@
 
 [Google官方原文链接](https://developer.android.com/guide/platform/index.html?hl=zh-cn)
 
-![platform architecture](android-stack_2x.png)
+![platform architecture](pic/android-stack_2x.png)
 ## Linux 内核
 Android 平台的基础是 Linux 内核。例如，Android Runtime (ART) 依靠 Linux 内核来执行底层功能，例如线程和低层内存管理。
 

@@ -8,7 +8,7 @@
 * [Activity 与 Fragment 之间如何进行通信？](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Activity_communicate_to_Fragment.md)
 * [IntentService 比 Service 好在哪](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Service.md)
 * [Thread 和 HandlerThread 区别](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Thread_HandlerThread.md)
-* 关于< include >< merge >< stub >三者的使用场景
+* [关于< include >< merge >< stub >三者的使用场景](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/include_merge_stub.md)
 * 对 Android 消息机制的理解( Binder、Handler )
 * handler发消息给子线程，looper怎么启动
 * Android 上的 Inter-Process-Communication 跨进程通信时如何工作的；

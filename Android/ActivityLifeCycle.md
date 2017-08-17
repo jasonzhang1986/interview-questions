@@ -1,5 +1,5 @@
 ## 一、正常情况下 Activity 的生命周期
- ![LifeCycle](ActivityLifeCycle.png)
+ ![LifeCycle](pic/ActivityLifeCycle.png)
 
 * **onCreate 方法**，Activity 被启动时的第一个方法，表示 Activity 正在被创建，在这个方法中一般做一些初始化的工作，比如调用 setContentView 方法加载界面布局，并且可以做一些初始化数据的工作：声明UI元素，定义成员变量，配置 UI 等。
 
