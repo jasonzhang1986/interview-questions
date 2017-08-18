@@ -295,4 +295,4 @@ private ServiceConnection mServiceConnect = new ServiceConnection() {
 
 [Gityuan](http://gityuan.com/2015/10/31/binder-prepare/)
 
-** Android 开发艺术探索 **
+**Android 开发艺术探索**
