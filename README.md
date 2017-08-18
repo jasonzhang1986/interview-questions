@@ -10,7 +10,7 @@
 * [Thread 和 HandlerThread 区别](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Thread_HandlerThread.md)
 * [关于< include >< merge >< stub >三者的使用场景](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/include_merge_stub.md)
 * 对 Android 消息机制的理解( [Binder](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Binder.md)、[Handler](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/Handler.md) )
-* []如何优化一个 ListView ?](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/performance-tip-for-listview.md)
+* [如何优化一个 ListView ?](https://github.com/jasonzhang1986/interview-questions/blob/master/Android/performance-tips-for-listview.md)
 * listview 图片加载错乱的原理和解决方案
 * RecyclerView 与 ListView 的区别，缓存机制的不同，性能
 * 怎么启动 service，servic 和 activity 怎么进行数据交互
