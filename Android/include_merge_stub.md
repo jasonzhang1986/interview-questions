@@ -1,4 +1,5 @@
-本篇是对官方文档的简单翻译，英文水平好的建议看原文 [官方文档链接](https://developer.android.com/training/improving-layouts/reusing-layouts.html#Include)
+本篇是对官方文档的简单翻译，英文水平好的建议看官方文档 [include&merge](https://developer.android.com/training/improving-layouts/reusing-layouts.html#Include) 
+、 [ViewStub](https://developer.android.com/training/improving-layouts/loading-ondemand.htm)
 
 ## 通过 < include / > 重用布局
 虽然 Android 提供了众多的 widget 来给小型的和可重用的交互使用，但你仍然有一些需求是需要使用特殊布局的较大组件。为了更加有效的重复使用完整的特殊布局，你可以使用 < inculde /> 和 < merge />标签在当前布局中嵌入另一个布局。
