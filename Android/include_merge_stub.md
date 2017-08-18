@@ -108,4 +108,83 @@
 运行后的效果以及层次结构：
 ![merge 效果](pic/merge.jpg)
 
-从层次图上看，merge view 被 include 到 LinearLayout 中之后，并没有添加新的层次结果。
+从层次图上看，merge view 被 include 到 LinearLayout 中之后，并没有添加新的层次。
+
+## 视图的延迟加载
+有时候你的app会有一些不常用但很复杂的布局，可能是详情、进度条或者是未执行的消息等，你可以通过仅在需要时加载视图来减少内存使用并加快渲染速度。
+
+延迟加载资源是应用程序在将来需要复杂视图时使用的一项重要技术。你可以通过为这些复杂但很少使用的视图定义 ViewStub 来实现该技术(延迟加载)。
+
+### 定义一个 ViewStub
+ViewStub 是一个轻量级的视图，没有任何 dimension 的设置，不绘制任何内容也不参与布局。因此，布局的 inflate 和 在 view hierarchy 中都是低消耗的。每一个 ViewStub 都需要包含 android:layout 属性来指定需要 inflate 的布局。
+下面代码演示的 ViewStub 是一个半透明的进度条，它只有当有新项目被添加的时候才会显示。
+```xml
+<ViewStub
+    android:id="@+id/stub_import"
+    android:inflatedId="@+id/panel_import"
+    android:layout="@layout/progress_overlay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom" />
+```
+### 加载 ViewStub 布局
+当你想要加载某个 ViewStub 布局并显示时，可以通过调用 setVisibility(View.VISIBLE) 或 inflate()。
+```java
+findViewById(R.id.stub_import)).setVisibility(View.VISIBLE);
+// or
+View importPanel = ((ViewStub) findViewById(R.id.stub_import)).inflate();
+```
+
+**Note:** inflate() 方法直接返回解析后的 view ，所以你不需要再调用 findViewById 来获取布局。
+
+一旦 visible 或 inflate，ViewStub 元素就不再属于 View 层次结构了，它被替换为解析后的布局，布局的根视图的 id 是 ViewStub 中 android:inflatedId 属性值。（ ViewStub 中指定的 android:id 在 ViewStub 被 setVisibility(View.VISIBLE) 或 inflate 之前有效。）
+
+**Note：** ViewStub 的一个缺点是它目前支持布局中的 < merge > 标签。
+
+例子：
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.jifengzhang.activitytest.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewStub
+        android:id="@+id/stub_import"
+        android:inflatedId="@+id/titlebar_import"
+        android:layout="@layout/titilebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</android.support.constraint.ConstraintLayout>
+
+<!-- ViewStub 实际的布局-->
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/titlebar_bg"
+    tools:showIn="@layout/activity_main" >
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+</FrameLayout>
+```
+
+运行结果
+![ViewStub](pic/ViewStub.jpg)
