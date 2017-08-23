@@ -64,7 +64,7 @@
 * TCP 与 UDP 区别与应用（三次握手和四次挥手）涉及到部分细节（如 client 如何确定自己发送的消息被 server 收到） HTTP 相关 提到过 Websocket 问了 WebSocket 相关以及与 socket 的区别
 * 是否熟悉 Android jni 开发，jni 如何调用 java 层代码
 * 进程间通信的方式
-* java 注解
+* java 注解 [JavaPoet](http://www.jianshu.com/p/95f12f72f69a)、[APT](https://joyrun.github.io/2016/07/19/AptHelloWorld/)
 * 计算一个 view 的嵌套层级
 * 项目组件化的理解
 * 基于自身工作经验和计算机相关知识，给出 移动端地图局部加载 瓦片大小的像素大小估值
@@ -107,7 +107,7 @@
 * 操作系统层面上，线程可以加哪些锁
 * 栈在系统中的方向是怎样的？为什么？
 * Java 中的类型转换
-* 修饰符 transient 和 volatile 的作用是什么？
+* 修饰符 transient 和 [volatile](https://github.com/jasonzhang1986/interview-questions/blob/master/Java/Volatile.md) 的作用是什么？
 * https 相关，如何验证证书的合法性，https 中哪里用了对称加密，哪里用了非对称加密，对加密算法（如 RSA ）等是否有了解
 * LRUCache 原理
 * HashMap 实现原理，ConcurrentHashMap 的实现原理
