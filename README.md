@@ -97,6 +97,7 @@
 * Integer 类对 int 的优化
 * 单例模式有哪些实现方式
 * 通过静态内部类实现单例模式有哪些优点
+* [sleep wait join yield 的区别](https://github.com/jasonzhang1986/interview-questions/blob/master/Java/Sleep_wait_join_yield.md)
 * synchronized volatile 关键字有什么区别？以及还有哪些同样功能的关键字
 * [synchronize用法](https://github.com/jasonzhang1986/interview-questions/blob/master/Java/Synchronized.md)
 * 操作系统进程间通信有哪些方法
