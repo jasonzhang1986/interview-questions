@@ -111,7 +111,7 @@
 * 修饰符 transient 和 [volatile](https://github.com/jasonzhang1986/interview-questions/blob/master/Java/Volatile.md) 的作用是什么？
 * https 相关，如何验证证书的合法性，https 中哪里用了对称加密，哪里用了非对称加密，对加密算法（如 RSA ）等是否有了解
 * LRUCache 原理
-* HashMap 实现原理，ConcurrentHashMap 的实现原理
+* [HashMap 实现原理](http://yikun.github.io/2015/04/01/Java-HashMap%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E7%8E%B0/)，ConcurrentHashMap 的实现原理
 * 线程挂起，休眠，释放资源相关，唤醒，线程同步，数据传递
 * static synchronized 方法的多线程访问和作用，同一个类里面两个 synchronized 方法，两个线程同时访问的问题
 * 内部类和静态内部类和匿名内部类，以及项目中的应用
