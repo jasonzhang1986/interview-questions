@@ -39,7 +39,7 @@
 * 谈谈 ClassLoader
 * 动态布局
 * 热修复,插件化
-* HashMap 源码, SpareArray 原理
+* [HashMap](https://tech.meituan.com/java-hashmap.html) 源码, SpareArray 原理
 * 性能优化,怎么保证应用启动不卡顿
 * 怎么去除重复代码
 * 动态加载
